@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-16Menu</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/asastes/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../src/asastes/image/auMIIUfiDoErbBZtkENTvwfA2JWPLZ9kBUyGzIRf.png" type="image/icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/i18next@23.4.7/i18next.min.js"></script>
+    <style>
+        @keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.group:hover img {
+  animation: spin-slow 5s linear infinite;
+}
+    </style>
+</head>
+<body>
+    <section class="min-h-screen bg-gray-300">
+     <div class="max-w-4xl bg-white  mx-auto">
+   <nav class="flex flex-row justify-between items-center p-2">
+  <img class="w-15 mx-2  sm:mx-10 flex-shrink-0" src="asastes/image/auMIIUfiDoErbBZtkENTvwfA2JWPLZ9kBUyGzIRf.png" alt="Logo">
+  <h2 class="text-base sm:text-2xl font-semibold truncate">Grill BBQ Restaurant</h2>
+  <div class="flex items-center mx-2 gap-2 flex-shrink-0 sm:gap-5 sm:mx-10">
+    <button class="bg-gray-100 px-2 py-1 text-gray-500 cursor-pointer">ع</button>
+    <a href="login-menu.html">Login</a>
+  </div>
+   </nav>
+        <div class="backimage"></div>
+        <div class="flex justify-between items-center py-10 max-[640px] gap-20 sm:mx-20  ">
+    <div class="flex gap-5 max-[640px]:mx-1 ">
+        <a href="">
+            <svg class="w-6 h-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path>
+            </svg>
+        </a>
+        <a href="">
+            <svg class="w-6 h-6 text-[#25D366]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.25361 18.4944L7.97834 18.917C9.18909 19.623 10.5651 20 12.001 20C16.4193 20 20.001 16.4183 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 13.4363 4.37821 14.8128 5.08466 16.0238L5.50704 16.7478L4.85355 19.1494L7.25361 18.4944ZM2.00516 22L3.35712 17.0315C2.49494 15.5536 2.00098 13.8345 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22C10.1671 22 8.44851 21.5064 6.97086 20.6447L2.00516 22ZM8.39232 7.30833C8.5262 7.29892 8.66053 7.29748 8.79459 7.30402C8.84875 7.30758 8.90265 7.31384 8.95659 7.32007C9.11585 7.33846 9.29098 7.43545 9.34986 7.56894C9.64818 8.24536 9.93764 8.92565 10.2182 9.60963C10.2801 9.76062 10.2428 9.95633 10.125 10.1457C10.0652 10.2428 9.97128 10.379 9.86248 10.5183C9.74939 10.663 9.50599 10.9291 9.50599 10.9291C9.50599 10.9291 9.40738 11.0473 9.44455 11.1944C9.45903 11.25 9.50521 11.331 9.54708 11.3991C9.57027 11.4368 9.5918 11.4705 9.60577 11.4938C9.86169 11.9211 10.2057 12.3543 10.6259 12.7616C10.7463 12.8783 10.8631 12.9974 10.9887 13.108C11.457 13.5209 11.9868 13.8583 12.559 14.1082L12.5641 14.1105C12.6486 14.1469 12.692 14.1668 12.8157 14.2193C12.8781 14.2457 12.9419 14.2685 13.0074 14.2858C13.0311 14.292 13.0554 14.2955 13.0798 14.2972C13.2415 14.3069 13.335 14.2032 13.3749 14.1555C14.0984 13.279 14.1646 13.2218 14.1696 13.2222V13.2238C14.2647 13.1236 14.4142 13.0888 14.5476 13.097C14.6085 13.1007 14.6691 13.1124 14.7245 13.1377C15.2563 13.3803 16.1258 13.7587 16.1258 13.7587L16.7073 14.0201C16.8047 14.0671 16.8936 14.1778 16.8979 14.2854C16.9005 14.3523 16.9077 14.4603 16.8838 14.6579C16.8525 14.9166 16.7738 15.2281 16.6956 15.3913C16.6406 15.5058 16.5694 15.6074 16.4866 15.6934C16.3743 15.81 16.2909 15.8808 16.1559 15.9814C16.0737 16.0426 16.0311 16.0714 16.0311 16.0714C15.8922 16.159 15.8139 16.2028 15.6484 16.2909C15.391 16.428 15.1066 16.5068 14.8153 16.5218C14.6296 16.5313 14.4444 16.5447 14.2589 16.5347C14.2507 16.5342 13.6907 16.4482 13.6907 16.4482C12.2688 16.0742 10.9538 15.3736 9.85034 14.402C9.62473 14.2034 9.4155 13.9885 9.20194 13.7759C8.31288 12.8908 7.63982 11.9364 7.23169 11.0336C7.03043 10.5884 6.90299 10.1116 6.90098 9.62098C6.89729 9.01405 7.09599 8.4232 7.46569 7.94186C7.53857 7.84697 7.60774 7.74855 7.72709 7.63586C7.85348 7.51651 7.93392 7.45244 8.02057 7.40811C8.13607 7.34902 8.26293 7.31742 8.39232 7.30833Z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- المجموعة الثانية -->
+    <div class="flex gap-3 max-[640px]:mx-1">
+        <a href="">
+            <svg class="w-7 h-7 text-[#1877f2]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+            </svg>
+        </a>
+        <a href="">
+            <svg class="w-7 h-7 text-[#000000]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+        </a>
+        <a href="">
+            <svg class="w-7 h-7 text-[#e4405f]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- المجموعة الثالثة -->
+    <div class="flex gap-3 max-[640px]:mx-1">
+        <a href="javascript:void(0);" class="clock">
+            <svg class="w-6 h-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+        <!-- models half -->
+        <div class="mx-auto flex items-center justify-center fixed inset-0 backdrop-blur-[1px] z-50 hidden models">
+  <div class="w-11/12 sm:w-3/4 md:w-md lg:w-md xl:w-md h-auto max-h-[90vh] bg-white shadow-lg rounded-md relative overflow-y-auto">
+    <!-- زر الإغلاق -->
+    <div>
+      <button class="text-2xl bg-gray-50 absolute top-2 cursor-pointer hover:bg-gray-100 left-2.5 px-1.5 close_button">x</button>
+    </div>
+
+    <!-- العنوان -->
+    <h3 class="font-bold text-center pt-4 mb-5">Working Time</h3>
+
+    <!-- الأيام -->
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Saturday</strong>
+      <h4 class="whitespace-nowrap">From 10:38 - To 13:38</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Sunday</strong>
+      <h4 class="whitespace-nowrap">From 08:10 - To 08:12</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Monday</strong>
+      <h4 class="whitespace-nowrap">From 12:13 - To 19:17</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Tuesday</strong>
+      <h4 class="whitespace-nowrap">From 08:11 - To 10:15</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Wednesday</strong>
+      <h4 class="whitespace-nowrap">From 08:10 - To 09:13</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 px-5">
+      <strong>Thursday</strong>
+      <h4 class="whitespace-nowrap">From 08:17 - To 02:17</h4>
+    </div>
+    <div class="flex justify-between items-center mb-2 pb-5 px-5">
+      <strong>Friday</strong>
+      <h4 class="whitespace-nowrap">From 02:17 - To 01:11</h4>
+    </div>
+  </div>
+</div>
+
+        <!-- models showCustomize -->
+       <div class="mx-auto z-50 fixed inset-0 showCustomize backdrop-blur-[2px] flex justify-center items-center hidden">
+  <div class="bg-white w-11/12 sm:w-3/4 md:w-2xl lg:w-3xl h-auto max-h-[90vh] shadow rounded-lg relative overflow-y-auto">
+    <button class="absolute top-2 right-2 cursor-pointer closeBtn">
+      <svg class="w-6 h-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18 17.94 6M18 18 6.06 6"></path>
+      </svg>
+    </button>
+    <div class="m-5 group">
+      <h2 class="font-bold text-2xl"></h2>
+      <h3 class="font-bold itemsPrice"></h3>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-start items-start">
+      <!-- Quantity -->
+      <div class="mt-3 mx-5">
+        <label class="pb-1">Quantity</label><br>
+        <input type="number" min="1" value="1"
+          class="p-1.5 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 border border-gray-300 rounded-lg mt-1 addNumber">
+      </div>
+
+      <!-- Size -->
+      <div class="mx-5 mt-3">
+        <label class="pb-1">Size</label><br>
+        <input type="text"
+          class="px-4 py-2 text-gray-400 border border-gray-300 rounded-lg mt-2 mr-3 bg-gray-100 text-center pointer-events-none whitespace-nowrap"
+          placeholder="Small - Not Available">
+        <input type="text"
+          class="px-4 py-2 text-gray-400 border border-gray-300 rounded-lg mt-2 bg-gray-100 text-center pointer-events-none whitespace-nowrap"
+          placeholder="Medium - Not Available">
+
+        <!-- الأزرار على نفس السطر -->
+        <div class="mt-4 flex gap-4">
+          <button
+            class="px-12 py-2 text-gray-500 border border-gray-300 rounded-lg text-center cursor-pointer hover:bg-gray-100 whitespace-nowrap"
+            id="largeBtn">Large -</button>
+          <button
+            class="px-7 py-2 text-gray-500 border border-gray-300 rounded-lg text-center cursor-pointer hover:bg-gray-100 whitespace-nowrap"
+            id="veryLargeBtn">Very Large -</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- خيارات -->
+    <div class="border border-gray-300 mt-5 mx-5">
+      <table class="w-full table-auto">
+        <tr>
+          <td class="border-r border-gray-300 p-5 align-top whitespace-nowrap">
+            <input type="radio" value="2" class="mr-2 inputAdd">Potatoes - 2.000 <br>
+            <input type="radio" value="3" class="mr-2 mt-3 inputRanch">Ranch sauce - 3.000
+          </td>
+          <td class="p-5 whitespace-nowrap">
+            <input type="radio" name="saltOption" class="mr-2">Without salt <br>
+            <input type="radio" name="saltOption" class="mr-2 mt-4" value="3">Extra salt <br>
+            <input type="radio" name="saltOption" class="mr-2 mt-4">Extra-Done <br>
+            <input type="radio" name="saltOption" class="mr-2 mt-4" value="3">Full-Done <br>
+            <input type="radio" name="saltOption" class="mr-2 mt-4" value="3">Half-Done
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Subtotal + أزرار -->
+    <div class="bg-gray-200 w-full p-4 mt-5 flex justify-between items-center">
+      <h2 class="text-amber-500 text-2xl Subtotal font-bold">Subtotal: 77.000</h2>
+      <div class="flex gap-2">
+        <button
+          class="md:py-2 md:px-4 py-1 px-2 bg-gray-500 text-white rounded font-medium cursor-pointer transition duration-300 addTotal">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14m-7 7V5"></path>
+          </svg>
+        </button>
+        <button
+          class="md:py-2 md:px-4 py-1 px-2 bg-black text-white rounded font-medium cursor-pointer transition duration-300 addButtonnn">
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 11.917 9.724 16.5 19 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+         <!-- API Menu -->
+   <div id="categories-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-0">
+  
+</div>
+      <!-- Total -->
+       <div class="bg-black w-11/12 sm:w-3/6 md:w-2xl lg:w-3/4 xl:w-3xl h-10 flex justify-center items-center mx-auto fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50 totalCart">
+  <a class="text-white text-center mx-auto cursor-pointer">
+    Total Order <span class="total">(0.000)</span>
+  </a>
+</div>
+
+
+     
+    </section>
+    <script>
+const url = "https://free-food-menus-api-two.vercel.app/all";
+const container = document.getElementById('categories-container');
+const total = document.querySelector('.total');
+let totalPace = parseFloat(localStorage.getItem('totalPace')) || 0;
+total.textContent = totalPace.toFixed(2);
+
+// جلب البيانات من API
+fetch(url)
+  .then(res => res.json())
+  .then(res => {
+    const categories = res.bbqs || res;
+    
+    categories.forEach(cat => {
+      const item = `
+        <div class="bg-white shadow w-52 mt-10 mx-2 group relative pb-5">
+          <div>
+            <div class="py-0.5">
+              <img class="rounded-full object-cover size-34 mx-auto my-5 transition-transform duration-500 ease-in-out group-hover:animate-spin-slow"
+                   src="${cat.img}"
+                   alt="Image not found"
+                   onerror="this.src='https://example.com/default-image.jpg'">
+            </div>
+            <div class="text-center">
+              <span class="absolute top-1 left-5 font-bold text-lg cardTotal">${cat.price}</span>
+              <h2 class="text-lg">${cat.name}</h2>
+              <p class="text-slate-400 mt-2 mb-1 p-2">${cat.dsc}</p>
+            </div>
+            <div class="flex justify-center items-center gap-2">
+              <button class="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 duration-300 text-white px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer addButton cartItems"
+                      title="Add to Cart">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                </svg>
+              </button>
+              <button class="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 duration-300 text-white px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 cursor-pointer addCustomize"
+                      title="Customize Options">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>`;
+      
+      container.insertAdjacentHTML("beforeend", item);
+    });
+
+    // ======== إضافة إلى السلة ========
+    const addButton = document.querySelectorAll('.addButton');
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    addButton.forEach(el => {
+      el.onclick = () => {
+        const parentGroup = el.closest('.group');
+        const itemPrice = parseFloat(parentGroup.querySelector('.cardTotal').textContent);
+        const itemName = parentGroup.querySelector('h2').textContent;
+        const itemImg = parentGroup.querySelector('img').src;
+
+        cartItems.push({
+          name: itemName,
+          price: itemPrice,
+          quantity: 1,
+          img: itemImg
+        });
+
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Item added successfully',
+          timer: 1500,
+          showConfirmButton: false
+        });
+
+        totalPace += itemPrice;
+        total.textContent = totalPace.toFixed(2);
+        localStorage.setItem('totalPace', totalPace);
+      };
+    });
+
+    // ======== المودال للتخصيص ========
+    const addCustomize = document.querySelectorAll('.addCustomize');
+    const showCustomize = document.querySelectorAll('.showCustomize');
+    const closeBtn = document.querySelector('.closeBtn');
+    const modalTitle = document.querySelector('.showCustomize .m-5 h2');
+    const priceTitle = document.querySelector('.showCustomize .m-5 h3');
+    const Subtotal = document.querySelector('.showCustomize .Subtotal');
+
+    addCustomize.forEach(el => {
+      el.onclick = () => {
+        showCustomize.forEach(modal => modal.classList.remove('hidden'));
+
+        const parentGroup = el.closest('.group');
+        const basePrice = parseFloat(parentGroup.querySelector('.cardTotal').textContent);
+        const itemName = parentGroup.querySelector('h2').textContent;
+
+        modalTitle.textContent = itemName;
+        priceTitle.textContent = `Price: ${basePrice}`;
+        Subtotal.textContent = `Subtotal: ${basePrice}`;
+
+        // ======== خيارات إضافية ========
+        const inputAdd = document.querySelectorAll('.inputAdd');
+        const inputRanch = document.querySelectorAll('.inputRanch');
+
+        inputAdd.forEach(el => {
+          el.onclick = () => {
+            const price = 2.000;
+            let subtotalValue = parseFloat(Subtotal.textContent.replace("Subtotal:", "").trim());
+
+            if (!el.classList.contains("active")) {
+              el.classList.add("active");
+              el.checked = true;
+              subtotalValue += price;
+            } else {
+              el.classList.remove("active");
+              el.checked = false;
+              subtotalValue -= price;
+            }
+
+            Subtotal.textContent = `Subtotal: ${subtotalValue.toFixed(3)}`;
+          };
+        });
+
+        inputRanch.forEach(el => {
+          el.addEventListener('click', () => {
+            const price = 3.000;
+            let subtotalValue = parseFloat(Subtotal.textContent.replace("Subtotal:", "").trim());
+
+            if (!el.classList.contains("active")) {
+              el.classList.add("active");
+              el.checked = true;
+              subtotalValue += price;
+            } else {
+              el.classList.remove("active");
+              el.checked = false;
+              subtotalValue -= price;
+            }
+
+            Subtotal.textContent = `Subtotal: ${subtotalValue.toFixed(3)}`;
+          });
+        });
+
+        // ======== اختيار الحجم ========
+        const largePrice = basePrice;
+        const veryLargePrice = basePrice + 15;
+
+        const largeBtn = document.getElementById("largeBtn");
+        const veryLargeBtn = document.getElementById("veryLargeBtn");
+
+        largeBtn.textContent = `Large - ${largePrice}`;
+        veryLargeBtn.textContent = `Very Large - ${veryLargePrice}`;
+
+        largeBtn.onclick = () => {
+          largeBtn.classList.add('border-black');
+          largeBtn.classList.remove('border-gray-300');
+          veryLargeBtn.classList.add('border-gray-300');
+          veryLargeBtn.classList.remove('border-black');
+
+          priceTitle.textContent = `Price: ${largePrice}`;
+          Subtotal.textContent = `Subtotal: ${largePrice}`;
+        };
+
+        veryLargeBtn.onclick = () => {
+          veryLargeBtn.classList.add('border-black');
+          veryLargeBtn.classList.remove('border-gray-300');
+          largeBtn.classList.add('border-gray-300');
+          largeBtn.classList.remove('border-black');
+
+          priceTitle.textContent = `Price: ${veryLargePrice}`;
+          Subtotal.textContent = `Subtotal: ${veryLargePrice}`;
+        };
+
+        // ======== تعديل الكمية ========
+        const addNumber = document.querySelector('.addNumber');
+        addNumber.onkeyup = () => {
+          if (addNumber.value.trim() === "") {
+            Subtotal.textContent = "Subtotal:0000";
+          } else {
+            const quantity = parseInt(addNumber.value) || 1;
+            const newSubtotal = basePrice * quantity;
+            Subtotal.textContent = `Subtotal: ${newSubtotal.toFixed(2)}`;
+          }
+        };
+      };
+    });
+
+    // ======== زر إغلاق المودال ========
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        showCustomize.forEach(modal => modal.classList.add('hidden'));
+      };
+    }
+
+    // ======== إضافة من المودال ========
+    const addButtonnn = document.querySelectorAll('.addButtonnn');
+    const showCustomizeModal = document.querySelector('.showCustomize');
+    const subtotalElement = document.querySelector('.showCustomize .Subtotal');
+    const quantityInput = document.querySelector('.showCustomize .addNumber');
+
+    addButtonnn.forEach(el => {
+      el.onclick = () => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Item added successfully',
+          timer: 1500,
+          showConfirmButton: false
+        });
+
+        const itemPrice = parseFloat(subtotalElement.textContent.replace("Subtotal:", "").trim());
+        const quantity = parseInt(quantityInput.value) || 1;
+        const finalPrice = itemPrice;
+
+        totalPace += finalPrice;
+        total.textContent = totalPace.toFixed(2);
+        localStorage.setItem('totalPace', totalPace);
+
+        showCustomizeModal.classList.add('hidden');
+      };
+    });
+
+    // ======== زر إضافة الإجمالي ========
+    const addTotal = document.querySelectorAll('.addTotal');
+    addTotal.forEach(el => {
+      el.onclick = () => {
+        const itemPrice = parseFloat(subtotalElement.textContent.replace("Subtotal:", "").trim());
+        totalPace += itemPrice;
+        total.textContent = totalPace.toFixed(2);
+        localStorage.setItem('totalPace', totalPace.toFixed(2));
+      };
+    });
+
+  })
+  .catch(err => {
+    console.error("حدث خطأ:", err);
+  });
+const totalCart = document.querySelector('.totalCart');
+totalCart.onclick = () => {
+  window.location.href = "cart.html";
+};
+
+const clock = document.querySelector('.clock');
+const models = document.querySelector('.models');
+const close_button = document.querySelector('.close_button');
+
+if (clock && models) {
+    clock.onclick = () => {
+        models.classList.remove('hidden');
+    };
+}
+
+if (close_button) {
+    close_button.onclick = () => {
+        models.classList.add('hidden');
+    };
+}
+</script>
+</body>
+</html> 

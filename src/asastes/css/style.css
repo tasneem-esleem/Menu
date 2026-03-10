@@ -1,0 +1,36 @@
+.backgrund{
+    background-image: url('../image/bg6.jpg');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    width: 100%;
+    height: 100vh;
+}
+.background{
+    background-image: url('../image/food-menu.png');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    width: 100%;
+    min-height: 100vh;
+}
+.backimage{
+    background-image: url('../image/GGhKzhzK2hAGZMMn4Q2ldOR6ZFOpbJLO01xBJzaa.jpg');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    width: 100%;
+    min-height: 480px;
+}
+.contan h4{
+
+}
+/* على الجوال */
+@media (max-width: 640px) {
+  .icons-container {
+    flex-wrap: nowrap;      
+    overflow-x: auto;        
+    -webkit-overflow-scrolling: touch; 
+  }
+  .icons-container a {
+    flex-shrink: 0;          
+  }
+}

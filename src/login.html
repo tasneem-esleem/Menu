@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - 16Menu</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/asastes/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../src/asastes/image/logo (3).png" type="image/icon">
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.bunny.net">
+     <link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap">
+
+</head>
+<body>
+  <div class="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8">
+  <!-- زر تغيير اللغة -->
+  <div class="absolute right-4 top-4 sm:right-10 sm:top-10">
+    <button class="bg-gray-100 px-2 py-1 text-gray-500 cursor-pointer language" data-i18n="language">En</button>
+  </div>
+
+  <!-- شعار -->
+  <div>
+    <img class="w-20 sm:w-25 mx-auto mb-5" src="asastes/image/logo (3).png" alt="Logo">
+  </div>
+
+  <!-- نموذج تسجيل الدخول -->
+  <div class="flex justify-center items-center">
+    <div class="bg-white shadow-md w-full max-w-md sm:w-lg px-6 py-4">
+      <form action="">
+        <!-- الايميل -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700" data-i18n="Email">Email</label>
+          <input type="email" class="w-full border p-2 border-gray-300 rounded-md shadow-sm mt-2 outline-0" id="email" data-i18n="emailPlaceholder" placeholder="Email" required>
+        </div>
+
+        <!-- كلمة المرور -->
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700 mt-4" data-i18n="Password">Password</label>
+          <input type="password" class="w-full border p-2 border-gray-300 rounded-md shadow-sm mt-2 outline-0" id="password" data-i18n="passwordPlaceholder" placeholder="Password" required>
+        </div>
+
+        <!-- تذكرني -->
+        <div class="flex items-center mt-5">
+          <input type="checkbox" class="shadow-sm" id="remember">
+          <label for="remember" class="text-gray-500 ml-2" data-i18n="Remember">Remember me</label>
+        </div>
+
+        <!-- رابط نسيت كلمة المرور وزر الدخول -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4">
+          <a href="#" class="text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" data-i18n="Forgot">Forgot your password?</a>
+          <button type="submit" class="bg-black text-white px-4 py-1 font-semibold rounded-md shadow-md cursor-pointer mt-3 sm:mt-0 sm:ml-3" data-i18n="Login">LOGIN</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script >
+  const resources = {
+  en: {
+    translation: {
+      "language": "En",
+      "Email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "Password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "Remember": "Remember me",
+      "Forgot": "Forgot your password?",
+      "Login": "LOGIN"
+    }
+  },
+  ar: {
+    translation: {
+      "language": "ع",
+      "Email": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "Password": "كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "Remember": "تذكرني",
+      "Forgot": "هل نسيت كلمة المرور؟",
+      "Login": "تسجيل دخول"
+    }
+  }
+};
+let currentLang = 'en';
+
+i18next.init({
+  lng: currentLang,
+  debug: true,
+  resources: resources
+}, () => {
+  updateContent();
+});
+
+// زر اللغة
+document.querySelectorAll('.language').forEach(el => {
+  el.onclick = () => {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    i18next.changeLanguage(currentLang, updateContent);
+  };
+});
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.setAttribute('placeholder', i18next.t(key));
+    } else {
+      el.textContent = i18next.t(key);
+    }
+  });
+
+  // تغيير اتجاه الصفحة
+  document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = currentLang;
+  document.body.classList.toggle('rtl', currentLang === 'ar');
+  document.body.classList.toggle('ltr', currentLang === 'en');
+}
+
+</script>
+</body>
+</html>

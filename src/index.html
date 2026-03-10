@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en"class="scroll-smooth" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title inertia>Landing Page - 16Menu</title>
+
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/asastes/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../src/asastes/image/logo (3).png" type="image/icon">
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <style>
+    /* الوضع الإنجليزي */
+body.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+body.ltr .language {
+  float: right; /* الزر على اليمين */
+}
+
+/* الوضع العربي */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .language {
+  float: left; /* الزر على الشمال */
+}
+
+</style>
+</head>
+<body>
+    <!-- section header -->
+   <section class="backgrund relative min-h-screen">
+  <div class="bg-slate-950/80 absolute inset-0"></div>
+<div class="loader fixed top-0 left-0 h-5 w-0 bg-amber-500 transition-[width] duration-400 ease-in-out z-0"></div>
+  <div class="absolute top-5 right-5 flex gap-2 z-50">
+    <button class="text-white border border-white bg-white/20 rounded-md p-1 px-4 hover:text-black hover:bg-white cursor-pointer language">
+      Ar
+    </button>
+
+    <a href="login-home.html" 
+       class="text-white border border-white bg-white/20 rounded-md p-1 px-4 hover:text-black hover:bg-white cursor-pointer progress" data-i18n="Restaurant">
+       Restaurant panel
+    </a>
+  </div>
+  <div class="container px-4 mx-auto relative z-30">
+    <div class="flex justify-center text-center pt-20">
+      <div>
+        <img class="w-28 sm:w-32 md:w-36 mx-auto" 
+             src="../src/asastes/image/logo (3).png" 
+             alt="logo"
+             style="filter: brightness(0) invert(1);">
+
+        <h1 class="font-semibold text-white text-3xl sm:text-4xl md:text-5xl leading-tight px-4 mt-5 w-4xl" data-i18n="title">
+          Your Solutions with a Smart Subscription
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-white/70 max-w-xl mx-auto mt-3 px-4" data-i18n="paragraph">
+          As his name suggests, he was a pioneer leading his team to success, paving the way for their growth. He was courageous in making decisions for change and development. Be a pioneer in developing yourself too
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3 px-4">
+          <a href="menu.html" class="text-amber-500 border border-neutral-500 rounded-md py-2 px-6 hover:text-white hover:bg-amber-500 hover:border-amber-500 cursor-pointer inline-block" data-i18n="menu">
+            Try menu now
+          </a>
+          <a href="#help-section" 
+             class="text-amber-500 border border-neutral-500 rounded-md py-2 px-6 hover:text-white hover:bg-amber-500 hover:border-amber-500 cursor-pointer inline-block"data-i18n="Subscriptions">
+            Subscriptions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+   </section>
+    <!-- section our story -->
+    <section class="py-16 sm:py-20 md:py-30 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-black text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 sm:mb-8 md:mb-10" data-i18n="Story">Our Story</h2>
+            <div class="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-center items-center gap-6 md:gap-4 lg:gap-4">
+                <div class="flex justify-center md:w-[calc(50%-0.5rem)] lg:w-1/3 order-1 md:order-3 lg:order-1">
+                    <img src="./asastes/image/m1.jpg" 
+                         class="rounded-lg shadow-xl 
+                                w-64 sm:w-80 md:w-full lg:w-100 
+                                object-cover md:mt-4 lg:-mt-45" 
+                         alt="">
+                </div>
+                
+                <!-- النصوص في المنتصف -->
+                <div class="flex flex-col text-center max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-xs px-4 order-2 md:order-1 lg:order-2">
+                    <p class="text-slate-400 leading-relaxed text-sm sm:text-base" data-i18n="design">
+                        "We believe that the strength of any digital platform lies in its ability to blend elegant design, seamless usability, and brilliant creativity. That's why we crafted a complete experience that showcases content with sophistication while keeping it effortlessly accessible to the user. Thanks to a modern interface and creative touches, we give your work a distinctive presence that leaves a lasting impression on your audience from the very first moment. Our goal is to provide you with a smooth, intuitive environment where colors harmonize with smart layouts, making navigation more enjoyable and fluid. What we offer is not just visually appealing design, but a comprehensive system that reflects your brand identity and delivers a seamless, engaging experience—keeping your brand closer, easier, and more impressive than ever."
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-sm sm:text-base mt-4" data-i18n="technology">
+                        "This platform is more than just technology; it is spirit, heritage, and enduring inspiration. Its concept was born from a vision that wars could not extinguish, flourishing instead in every detail and pulse of its design. Here, creativity meets simplicity, turning every interface into a story. What we offer is not merely a solution, but a tribute to resilience, celebrating ideas that—even in the face of loss—grow, inspire, and leave a lasting impact on every heart they touch."
+                    </p>
+                </div>
+                <div class="flex justify-center md:w-[calc(50%-0.5rem)] lg:w-1/3 order-3 md:order-2 lg:order-3">
+                    <img src="./asastes/image/m2.jpg" 
+                         class="rounded-lg shadow-xl 
+                                w-64 sm:w-80 md:w-full lg:w-100 
+                                object-cover md:mt-4 lg:-mt-60" 
+                         alt="">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- section Services -->
+    <section class="background relative min-h-screen md:min-h-fit">
+    <div class="absolute bg-white/80 dark:bg-slate-900/80 inset-0"></div>
+    <div class="container mx-auto relative z-10">
+    <div >
+    <h3 class="text-white text-4xl text-center font-semibold pt-25 mb-15 z-50" data-i18n="Services">Services</h3>
+    </div>
+    <div class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row justify-center items-center gap-10">
+    <div class="group bg-white/90 dark:bg-slate-800/90 w-75 h-100 rounded-2xl flex flex-col justify-start shadow-xl hover:shadow-2xl hover:scale-105 transition-all backdrop-blur-md">
+    <div class="bg-amber-500 w-18 h-18 rounded-md mx-auto flex align-middle justify-center items-center mt-10">
+     <i class="fa-solid fa-pizza-slice" style="color: rgb(255, 255, 255); font-size: 30px;"></i>   
+    </div>
+    <div class="contan">
+    <h4 class="text-2xl text-slate-800 dark:text-white font-bold text-center pt-5 dark:group-hover:text-amber-500" data-i18n="Flexible">Flexible Menu <span class="block">Management</span></h4>
+    <p class="text-slate-600 dark:text-slate-300 mt-3 text-center p-3" data-i18n="Manage">
+     Manage your restaurant menu with full flexibility. Add, edit, or remove items and categories anytime to fit your business needs.
+    </p>
+   </div>
+</div>
+            
+            <!-- Card 2 -->
+  <div class="group bg-white/90 dark:bg-slate-800/90 w-75 h-100 rounded-2xl flex flex-col justify-start shadow-xl hover:shadow-2xl hover:scale-105 transition-all backdrop-blur-md">
+                <div class="bg-amber-500 w-18 h-18 rounded-md mx-auto flex align-middle justify-center items-center mt-10">
+                    <i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255); font-size: 30px;"></i>
+                </div>
+                <div class="contan">
+                    <h4 class="text-2xl text-slate-800 dark:text-white font-bold text-center pt-5 dark:group-hover:text-amber-500 p-1" data-i18n="Role">Role-Based Access Control</h4>
+                    <p class="text-slate-600 dark:text-slate-300 mt-3 text-center p-3" data-i18n="Assign">
+                        Assign specific roles like Kitchen, Waiter, Cashier, and Delivery to your staff, each with customized permissions for smooth operation.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Card 3 --->
+            <div class="group bg-white/90 dark:bg-slate-800/90 w-75 h-100 rounded-2xl flex flex-col justify-start shadow-xl hover:shadow-2xl hover:scale-105 transition-all backdrop-blur-md md:col-span-2 lg:col-span-1 md:justify-self-center lg:ml-0">
+                <div class="bg-amber-500 w-18 h-18 rounded-md mx-auto flex align-middle justify-center items-center mt-10">
+                    <i class="fa-solid fa-motorcycle" style="color: rgb(255, 255, 255); font-size: 30px;"></i>   
+                </div>
+                <div class="contan">
+                    <h4 class="text-2xl text-slate-800 dark:text-white font-bold text-center pt-5 p-1 dark:group-hover:text-amber-500  " data-i18n="Dashboard">
+                        Subscription &
+                         Dashboard</h4>
+                    <p class="text-slate-600 dark:text-slate-300 mt-3 text-center p-3" data-i18n="control">
+                        Subscribe to flexible plans and get a personalized dashboard to control locations, working hours, and monitor all restaurant activities.
+                    </p>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <!-- section card Monthly&Yearly -->
+     <section class="bg-gray-50 pb-25" id="help-section">
+     <div class="flex justify-center px-4 sm:px-0">
+     <div class="dark:bg-slate-700 rounded-2xl flex flex-col sm:flex-row">
+        <button class="bg-indigo-500 p-2 px-4 text-white text-sm font-medium transition rounded-l-md sm:rounded-l-md sm:rounded-t-none cursor-pointer Monthly " data-i18n="Monthly">Monthly</button>
+        <button class="dark:text-white p-2 px-4 text-sm font-medium transition cursor-pointer rounded-r-md sm:rounded-r-md sm:rounded-b-none Yearly" data-i18n="Yearly">Yearly</button>
+    </div>
+     </div>
+    <!-- card Monthly -->
+    <div class="flex justify-center flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-10 px-4 cardhidden ">
+   
+            <!-- card 1 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30">
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Elite">Elite Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl ">25</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo">/mo</span>
+        <div>
+        <p class="text-slate-500 mt-2">
+       <span data-i18n="full-short">A full-featured plan for restaurants offering complete in-house and delivery services. Includes Kitc...</span>
+       <span class="hidden show-more" data-i18n="full-long">hen, Cashier, Waiter, and Delivery management.</span>
+      </p>
+     <span class="text-indigo-500 cursor-pointer show" id="toggle-full" data-i18n="Show">Show more</span>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Waiter">Waiter</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Casher">Casher</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+         <!-- card 2 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30 relative">
+        <span class="bg-green-600 p-1 px-4 font-semibold text-white rounded-2xl absolute right-5 -top-4" data-i18n="Most">Most Popular</span>
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Hospitality">Hospitality Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl">20</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo2">/mo</span>
+        <div>
+        <p class="text-slate-500 mt-2">
+  <span data-i18n="ideal-short">An ideal plan for restaurants focusing on dine-in services. Includes Kitchen, Cashier, and Waiter to…</span>
+  <span class="hidden show-more" data-i18n="ideal-long">tools.</span>
+</p>
+<span class="text-indigo-500 cursor-pointer show" id="toggle-ideal" data-i18n="Show">Show more</span>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Casher">Casher</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+         <!-- card 3 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30">
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Basic">Basic Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl ">15</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo">/mo</span>
+        <div>
+        <p class="text-slate-500 mt-2">
+  <span data-i18n="designed-short">Designed for delivery-based restaurants without dine-in service. Includes Kitchen, Cashier, and Deli…</span>
+  <span class="hidden show-more" data-i18n="designed-long">Delivery tools..</span>
+</p>
+<span class="text-indigo-500 cursor-pointer show" id="toggle-designed" data-i18n="Show">Show more</span>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+    </div>
+
+
+     <!-- card years -->
+    <div class="flex justify-center flex-col items-center md:flex-row md:flex-wrap md:justify-center gap-10 px-4 hidden cardShow">
+        <!-- card 1 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30">
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Elite">Elite Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl ">149</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo">/mo</span>
+        <div>
+        <p class="text-slate-500 mt-2"data-i18n="full">A full-featured plan for restaurants offering complete in-house and delivery services. Includes Kitc... <span class="hidden show-more">hen, Cashier, Waiter, and Delivery management.</span></p>
+        <span class="text-indigo-500 cursor-pointer show" >Show more</span>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Waiter">Waiter</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Casher">Casher</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+         <!-- card 2 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30 relative">
+        <span class="bg-green-600 p-1 px-4 font-semibold text-white rounded-2xl absolute right-5 -top-4" data-i18n="Most">Most Popular</span>
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Hospitality">Hospitality Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl ">129</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo">/mo</span>
+        <div>
+         <p class="text-slate-500 mt-2">
+  <span data-i18n="ideal-short">An ideal plan for restaurants focusing on dine-in services. Includes Kitchen, Cashier, and Waiter to…</span>
+  <span class="hidden show-more" data-i18n="ideal-long">tools.</span>
+</p>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Casher">Casher</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+         <!-- card 3 -->
+     <div class="bg-slate-900 w-90 shadow shadow-slate-950/5 rounded-lg mt-30">
+        <div class="pt-7 px-5">
+        <div class="text-white font-semibold mb-2" data-i18n="Basic">Basic Plan</div>
+        <span class="text-white font-medium text-3xl">$</span>
+        <span class="text-white font-medium text-4xl ">99</span>
+        <span class="text-slate-500 font-medium" data-i18n="mo">/mo</span>
+        <div>
+         <p class="text-slate-500 mt-2">
+  <span data-i18n="designed-short">Designed for delivery-based restaurants without dine-in service. Includes Kitchen, Cashier, and Deli…</span>
+  <span class="hidden show-more" data-i18n="designed-long">Delivery tools..</span>
+</p>
+<span class="text-indigo-500 cursor-pointer show" id="toggle-designed" data-i18n="Show">Show more</span>
+        </div>
+        <div class="mt-10">
+        <h4 class="font-semibold text-white" data-i18n="Includes">Includes:</h4>
+        <ul>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="_Menu">Menu</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1" data-i18n="Kitchen">Kitchen</span>
+            </li>
+            <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+             <li class="flex gap-2 mt-3">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-slate-500 -mt-1">-</span>
+            </li>
+        </ul>
+        </div>
+        <a class="w-full cursor-pointer inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 my-3 text-sm font-medium text-white hover:bg-indigo-600 transition mb-5 Subscribe" data-i18n="Now">Subscribe Now</a>
+        </div>
+       
+     </div>
+    </div>
+
+     </section>
+
+     <!-- section Need help -->
+    <section class="mb-15 px-4 sm:px-6 lg:px-8">
+     <div class="container mt-25 mx-auto max-w-7xl">
+     <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4 text-center" data-i18n="Need">Need Help?</h3>
+     <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-400 max-w-3xl mx-auto px-4 sm:px-0" data-i18n="support">Our support team is here to help you with any questions or issues you may have.</p>
+     <div class="max-w-4xl mx-auto mt-10 sm:mt-15 px-4 sm:px-0">
+     <div class="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-6 sm:p-8 md:p-12">
+    <div class="w-16 h-16 rounded-full bg-emerald-900/30 flex justify-center items-center mx-auto mb-8 sm:mb-10">
+    <svg class="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+  </svg>
+    </div>
+    
+     <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4 text-center" data-i18n="Touch">Get in Touch</h3>
+     <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 text-center px-4 sm:px-0" data-i18n="questions">Have questions about our services or need technical support? We're here to help!</p>
+     <div class="flex justify-center items-center">
+        <a href="https://wa.me/96876969805" target="_blank" class="bg-slate-600 px-6 sm:px-8 p-3 sm:p-4 text-sm sm:text-base text-white rounded-lg inline-flex font-semibold transition duration-300 transform hover:scale-105">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"></path>
+  </svg><span class="whitespace-nowrap" data-i18n="WhatsApp">WhatsApp Support</span></a>  
+     </div>
+      <p class="mt-8 sm:mt-8 text-xs sm:text-sm text-slate-500 text-center px-4 sm:px-0 " data-i18n="typically">We typically respond within 24 hours during business days.</p>
+     </div>
+     </div>
+
+     </div>
+     </div>
+    </section>
+
+    <!-- section login -->
+     <section class="fixed flex justify-center items-center model hidden ">
+        <div class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-[1px] ">
+        <div class="max-w-md w-full bg-slate-800 rounded-xl shadow-xl relative p-4 ">
+        <i class="fa fa-times absolute right-3  text-gray-400 hover:text-black decoration-200 cursor-pointer times"></i>
+         <div class="text-center">
+         <button class="bg-indigo-600 text-white font-semibold rounded-t-md p-2 px-4 cursor-pointer Register" data-i18n="Register">Register</button>
+         <button class="text-gray-500 font-semibold p-2 px-4  decoration-2 cursor-pointer login rounded-t-md " data-i18n="login">Login</button>
+        </div>
+       <div class="form_Continue">
+         <form action="">
+            <input type="text" data-i18n="RestaurantName" class="bg-white p-2.5 w-full mt-7 rounded-md outline-0" placeholder="Restaurant Name" required>
+           <input type="email" data-i18n="Email" class="bg-white p-2.5 w-full mt-4 rounded-md outline-0" placeholder="Email" required>
+          <input type="number" data-i18n="Phone" class="bg-white p-2.5 w-full mt-4 rounded-md outline-0" placeholder="Phone Number" required>
+          <input type="password" data-i18n="Password" class="bg-white p-2.5 w-full mt-4 rounded-md outline-0" placeholder="Password" required>
+          <input type="password" data-i18n="Password" class="bg-white p-2.5 w-full mt-4 rounded-md outline-0" placeholder="Confirm Password" required>
+
+        </form>
+        <button type="submit" class="bg-[#4f46e5] w-full text-white font-semibold p-3 mt-4 rounded-md cursor-pointer hover:bg-indigo-600 " data-i18n="Payment">Continue to Payment</button>
+       </div>
+        <div class="hidden form_login">
+         <form action="">
+        <input type="text" class="bg-white p-2.5 w-full mt-7 rounded-md outline-0"  placeholder="Email" data-i18n="Email" required>
+        <input type="email" class="bg-white p-2.5 w-full mt-4 rounded-md outline-0"  placeholder="Password" data-i18n="Password" required>
+        </form>
+        <button type="submit" class="bg-[#4f46e5] w-full text-white font-semibold p-3 mt-4 rounded-md cursor-pointer hover:bg-indigo-600 " data-i18n="LoginPayment">Login and Go to Payment</button>
+        </div>
+       
+        </div>
+        </div>   
+     </section>
+
+    <!-- footer -->
+    <footer class="bg-[#1f1f1f] ">
+    <div class="container">
+        <p class="max-w-xl mx-auto text-sm leading-relaxed text-white text-center pt-20 pb-5">16Menu</p>
+        <div class="flex justify-center gap-3">
+        <a href=""target="_blank"class="hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-[#3b5998]" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13 9H17.5L17 11H13V20H11V11H7V9H11V7.12777C11 5.34473 11.1857 4.69816 11.5343 4.04631C11.8829 3.39446 12.3945 2.88288 13.0463 2.53427C13.6982 2.18565 14.3447 2 16.1278 2C16.6498 2 17.1072 2.05 17.5 2.15V4H16.1278C14.8041 4 14.401 4.07784 13.9895 4.29789C13.6862 4.46011 13.4601 4.68619 13.2979 4.98951C13.0778 5.40096 13 5.80407 13 7.12777V9Z"></path>
+        </svg>
+        </a>
+        <a href="#"target="_blank"class="hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-[#1DA1F2]" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 2H1L9.26086 13.0145L1.44995 21.9999H4.09998L10.4883 14.651L16 22H23L14.3917 10.5223L21.8001 2H19.1501L13.1643 8.88578L8 2ZM17 20L5 4H7L19 20H17Z"></path>
+        </svg>
+        </a>
+        <a href="#"target="_blank"class="hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-[#c32aa3]" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915Z"></path>
+        </svg>
+        </a>
+          
+        </div>
+    </div>
+    <div class="py-6 mt-10 border-t border-gray-700 text-center text-sm">
+    <p class="text-white">© 2026 All rights reserved - 16menu.</p>
+    </div>
+
+    </footer>
+    <script>
+  const progress = document.querySelector('.progress');
+  const loader = document.querySelector('.loader');
+
+  if (progress && loader) {
+    progress.onclick = (e) => {
+      e.preventDefault(); 
+
+      loader.style.display = "block"; 
+      loader.style.width = "0%";
+
+      let progressValue = 0;
+      const interval = setInterval(() => {
+        progressValue += 20;
+        loader.style.width = progressValue + "%";
+
+        if (progressValue >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            loader.style.display = "none";
+            window.location.href = "login-home.html";
+          }, 300);
+        }
+      }, 200);
+    };
+  }
+
+</script>
+
+<script src="./asastes/js/script.js"></script>
+</body>
+</html>
+<!-- 
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->

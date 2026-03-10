@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-16Menu</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/asastes/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+</head>
+<body>
+   <section class="min-h-screen bg-gray-300">
+  <div class="max-w-4xl bg-white  mx-auto">
+    <nav class="flex flex-row justify-between items-center p-2">
+      <!-- اللوجو -->
+      <img class="w-15 mx-2 sm:mx-10 flex-shrink-0" src="asastes/image/auMIIUfiDoErbBZtkENTvwfA2JWPLZ9kBUyGzIRf.png" alt="Logo">
+
+      <!-- اسم المطعم -->
+      <h2 class="text-base sm:text-2xl font-semibold truncate" data-i18n="restaurantName">Grill BBQ Restaurant</h2>
+
+      <!-- الأزرار -->
+      <div class="flex items-center mx-2 gap-2 flex-shrink-0 sm:gap-5 sm:mx-10">
+        <button class="bg-gray-100 px-2 py-1 text-gray-500 cursor-pointer language" data-i18n="language">ع</button>
+        <a href="" data-i18n="loginLink">Login</a>
+      </div>
+    </nav>
+
+    <div class="backimage"></div>
+
+    <div class="py-20 flex flex-col justify-center px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center items-center">
+        <div class="bg-white shadow-md w-full max-w-md sm:w-lg px-6 ">
+          <form action="">
+            <div>
+              <label for="Phone" class="block text-sm font-medium text-gray-700" data-i18n="phoneLabel">Phone</label>
+              <input type="phone" class="w-full border p-2 border-gray-300 rounded-md shadow-sm mt-2 outline-0 focus:border-indigo-500 focus:ring-indigo-500" id="email" required>
+            </div>
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-700 mt-4" data-i18n="passwordLabel">Password</label>
+              <input type="password" class="w-full border p-2 border-gray-300 rounded-md shadow-sm mt-2 outline-0 focus:border-indigo-500 focus:ring-indigo-500" id="password" required>
+            </div>
+            <div class="flex items-center mt-5">
+              <input type="checkbox" class="shadow-sm">
+              <span class="text-gray-500 ml-2" data-i18n="rememberMe">Remember me</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4 pb-6">
+              <a href="register-menu.html" class="text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" data-i18n="noAccount">Don't have account?</a>
+              <a href="" class="bg-black text-white px-4 py-1 font-semibold rounded-md shadow-md cursor-pointer mt-3 sm:mt-0 sm:ml-3" data-i18n="loginBtn">LOGIN</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <script>
+    const resources = {
+  en: {
+    translation: {
+      "language": "En",
+      "restaurantName": "Grill BBQ Restaurant",
+      "loginLink": "Login",
+      "phoneLabel": "Phone",
+      "passwordLabel": "Password",
+      "rememberMe": "Remember me",
+      "noAccount": "Don't have account?",
+      "loginBtn": "LOGIN"
+    }
+  },
+  ar: {
+    translation: {
+      "language": "ع",
+      "restaurantName": "مطعم جريل للشواء",
+      "loginLink": "تسجيل الدخول",
+      "phoneLabel": "الهاتف",
+      "passwordLabel": "كلمة المرور",
+      "rememberMe": "تذكرني",
+      "noAccount": "ليس لديك حساب؟",
+      "loginBtn": "تسجيل الدخول"
+    }
+  }
+};
+let currentLang = 'en';
+
+i18next.init({
+  lng: currentLang,
+  debug: true,
+  resources: resources
+}, updateContent);
+
+document.querySelectorAll('.language').forEach(el => {
+  el.onclick = () => {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    i18next.changeLanguage(currentLang, updateContent);
+  };
+});
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.setAttribute('placeholder', i18next.t(key));
+    } else {
+      el.textContent = i18next.t(key);
+    }
+  });
+
+  document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = currentLang;
+  document.body.classList.toggle('rtl', currentLang === 'ar');
+  document.body.classList.toggle('ltr', currentLang === 'en');
+}
+  </script>
+</body>
+</html>

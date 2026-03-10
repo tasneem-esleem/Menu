@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - 16Menu</title>
+    <link rel="stylesheet" href="../src/output.css">
+  
+    <link rel="stylesheet" href="../src/asastes/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../src/asastes/image/logo (3).png" type="image/icon">
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.bunny.net">
+     <link rel="stylesheet" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap">
+</head>
+<body class="font-sans rtl:font-imb antialiased">
+<section>
+  <div class="min-h-screen relative flex justify-center items-center px-4 sm:px-6 lg:px-8">
+    <!-- زر اللغة -->
+    <div class="absolute right-4 top-4 sm:right-10 sm:top-10">
+      <button class="bg-gray-100 px-2 py-1 text-gray-500 cursor-pointer language" data-i18n="language">En</button>
+    </div>
+
+    <div class="text-center -mt-10 sm:-mt-20 max-w-2xl">
+      <img class="w-24 sm:w-40 mx-auto mb-5" src="asastes/image/logo (3).png" alt="">
+      <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-5 text-gray-900 mb-5" data-i18n="title">16Menu</h1>
+      <p class="text-gray-600 text-base sm:text-lg leading-7 sm:leading-8 mt-6 sm:mt-8 mb-10 sm:mb-15" id="paragraph2" data-i18n="paragraph">
+        As his name suggests, he was a pioneer leading his team to success, paving the way for their growth. 
+        He was courageous in making decisions for change and development. Be a pioneer in developing yourself too
+      </p>
+      <a href="login.html" target="_blank" class="bg-black text-white px-4 py-2 sm:py-2.5 font-semibold rounded-md shadow-md cursor-pointer" id="Login" data-i18n="login">Login</a>
+    </div>
+  </div>
+</section>
+ <script>
+  const resources = {
+  en: {
+    translation: {
+      "language": "En",
+      "title": "16Menu",
+      "paragraph": "As his name suggests, he was a pioneer leading his team to success, paving the way for their growth. He was courageous in making decisions for change and development. Be a pioneer in developing yourself too",
+      "login": "Login"
+    }
+  },
+  ar: {
+    translation: {
+      "language": "ع",
+      "title": "16Menu",
+      "paragraph": "كما يشير اسمه، كان رائدًا يقود فريقه نحو النجاح، ممهّدًا الطريق لنموهم. كان شجاعًا في اتخاذ القرارات للتغيير والتطوير. كن رائدًا في تطوير نفسك أيضًا",
+      "login": "تسجيل الدخول"
+    }
+  }
+};
+let currentLang = 'en';
+
+i18next.init({
+  lng: currentLang,
+  debug: true,
+  resources: resources
+}, updateContent);
+
+document.querySelectorAll('.language').forEach(el => {
+  el.onclick = () => {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    i18next.changeLanguage(currentLang, updateContent);
+  };
+});
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.setAttribute('placeholder', i18next.t(key));
+    } else {
+      el.textContent = i18next.t(key);
+    }
+  });
+
+  document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = currentLang;
+  document.body.classList.toggle('rtl', currentLang === 'ar');
+  document.body.classList.toggle('ltr', currentLang === 'en');
+}
+ </script>
+</body>
+</html>
